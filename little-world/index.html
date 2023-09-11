@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo em Terceira Pessoa</title>
+  <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+</head>
+
+<body>
+  <a-scene>
+    <!-- Câmera em terceira pessoa -->
+    <a-camera id="camera" position="0 0 10" look-controls>
+      <a-cursor position="0 0 -1" geometry="primitive: ring; radiusOuter: 0.015"
+        material="color: black; shader: flat"></a-cursor>
+    </a-camera>
+
+    <!-- planetas -->
+    <a-entity position="0 0 0" a-entity id="sol" scale="1 1 1" gltf-model="url(./sun.glb)" light="type: point; intensity: 2;">
+      <a-animation attribute="rotation" to="0 360 0" repeat="indefinite" dur="5000" easing="linear"></a-animation>
+      <a-entity id="terra" scale="0.1 0.1 0.1" gltf-model="url(./earth.glb)" position="-5 -1 0">
+        <a-animation attribute="rotation" to="0 360 0" repeat="indefinite" dur="1500" easing="linear"></a-animation>
+      </a-entity>
+    </a-entity>
+
+    <!-- Ambiente -->
+    <a-sky src="https://cdn.aframe.io/a-painter/images/sky.jpg"></a-sky>
+
+    <!-- Iluminação -->
+    <a-light type="ambient" color="#111"></a-light>
+
+    <script src="script.js"></script>
+  </a-scene>
+</body>
+
+</html>
