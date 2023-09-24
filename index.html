@@ -11,14 +11,14 @@
 <body>
   <a-scene>
     <!-- Câmera em primeira pessoa -->
-    <a-camera id="camera" position="0 20 10" look-controls>
+    <a-camera id="camera" position="0 0 10" look-controls>
       <a-cursor position="0 0 -1" geometry="primitive: ring; radiusOuter: 0.015"
         material="color: black; shader: flat"></a-cursor>
     </a-camera>
 
     <!-- planetas -->
     <a-entity position="0 0 0" a-entity id="sol" scale="1 1 1" gltf-model="url(./sun.glb)" light="type: point; intensity: 2;">
-      <!-- <a-animation attribute="rotation" to="0 360 0" repeat="indefinite" dur="5000" easing="linear"></a-animation> -->
+      <a-animation attribute="rotation" to="0 360 0" repeat="indefinite" dur="5000" easing="linear"></a-animation>
       <!-- Mercúrio -->
       <a-entity id="mercurio" scale="0.05 0.05 0.05" gltf-model="url(./earth.glb)" position="-2 -0.5 1">
         <a-animation attribute="rotation" to="0 360 0" repeat="indefinite" dur="1500" easing="linear"></a-animation>
