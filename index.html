@@ -16,11 +16,11 @@
         material="color: black; shader: flat"></a-cursor>
     </a-camera>
 
-    <!-- planetas -->
+    <!-- sistema solar -->
     <a-entity position="0 0 0" a-entity id="sol" scale="1 1 1" gltf-model="url(./sun.glb)" light="type: point; intensity: 2;">
-      <a-animation attribute="rotation" to="0 360 0" repeat="indefinite" dur="5000" easing="linear"></a-animation>
+      <!-- <a-animation attribute="rotation" to="0 360 0" repeat="indefinite" dur="5000" easing="linear"></a-animation> -->
       <!-- Mercúrio -->
-      <a-entity id="mercurio" scale="0.05 0.05 0.05" gltf-model="url(./earth.glb)" position="-2 -0.5 1">
+      <a-entity id="mercurio" scale="0.05 0.05 0.05" gltf-model="url(./mercurio.glb)" position="-2 -0.5 1">
         <a-animation attribute="rotation" to="0 360 0" repeat="indefinite" dur="1500" easing="linear"></a-animation>
       </a-entity>
       <!-- Vênus -->
@@ -36,19 +36,19 @@
         <a-animation attribute="rotation" to="0 360 0" repeat="indefinite" dur="2500" easing="linear"></a-animation>
       </a-entity>
       <!-- Júpiter -->
-      <a-entity id="jupiter" scale="0.2 0.2 0.2" gltf-model="url(./earth.glb)" position="14 -2.5 5">
+      <a-entity id="jupiter" scale="0.2 0.2 0.2" gltf-model="url(./jupiter.glb)" position="14 -2.5 5">
         <a-animation attribute="rotation" to="0 360 0" repeat="indefinite" dur="7000" easing="linear"></a-animation>
       </a-entity>
       <!-- Saturno -->
-      <a-entity id="saturno" scale="0.15 0.15 0.15" gltf-model="url(./earth.glb)" position="-20 -3 -3">
+      <a-entity id="saturno" scale="2 2 2" gltf-model="url(./saturn.glb)" position="-20 -3 -3">
         <a-animation attribute="rotation" to="0 360 0" repeat="indefinite" dur="8500" easing="linear"></a-animation>
       </a-entity>
       <!-- Urano -->
-      <a-entity id="urano" scale="0.13 0.13 0.13" gltf-model="url(./earth.glb)" position="26 -3.5 1">
+      <a-entity id="urano" scale="0.13 0.13 0.13" gltf-model="url(./urano.glb)" position="26 -3.5 1">
         <a-animation attribute="rotation" to="0 360 0" repeat="indefinite" dur="9000" easing="linear"></a-animation>
       </a-entity>
       <!-- Netuno -->
-      <a-entity id="netuno" scale="0.12 0.12 0.12" gltf-model="url(./earth.glb)" position="-32 -4 8">
+      <a-entity id="netuno" scale="0.12 0.12 0.12" gltf-model="url(./neptune.glb)" position="-32 -4 8">
         <a-animation attribute="rotation" to="0 360 0" repeat="indefinite" dur="9500" easing="linear"></a-animation>
       </a-entity>
     </a-entity>
